@@ -1,8 +1,3 @@
-# start gui
-if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-	exec startx
-fi
-
 # vimplug
 if [ ! -f ~/.local/share/nvim/site/autoload/plug.vim ]; then
     curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
@@ -52,12 +47,9 @@ alias pip="pip3"
 alias nw="newsboat -u ~/.newsboat/urls -c ~/.newsboat/cache.db -C ~/.newsboat/config"
 alias yt="newsboat -u ~/.newsboat/yturls -c ~/.newsboat/ytcache.db -C ~/.newsboat/ytconfig"
 alias gw="cd ~/Documents/wiki"
-alias gc="cd ~/Documents/void"
+alias gc="cd ~/Documents/dotfiles"
 alias gd="cd ~/Downloads"
 alias uw="gw && git add . && git commit -m 'updated' && git push && cd -"
 alias uc="gc && git add . && git commit -m 'updated' && git push && cd -"
-## void 
-alias xu="sudo xbps-install -Syu"
-alias xi="sudo xbps-install -S"
-alias xq="sudo xbps-query -R"
-alias xr="sudo xbps-remove -R"
+alias u="sudo apt-get update -y && sudo apt-get upgrade -y"
+alias i="sudo apt-get install -y"

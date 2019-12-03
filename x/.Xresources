@@ -16,6 +16,7 @@ URxvt*background: #1d1f21
 URxvt*underlineColor: #4682b4
 URxvt*highlightColor: #4682b4
 URxvt*cursorColor: #c5c8c6
+URxvt*iconFile: /usr/share/icons/Yaru/32x32/apps/terminal.png:
 
 ! colors
 URxvt*color0: #3f3f3f

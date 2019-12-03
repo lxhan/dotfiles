@@ -1,6 +1,6 @@
 # Autofit
-autofit-smaller=90%x90%
-autofit-larger=90%x90%
+autofit-smaller=80%x80%
+autofit-larger=80%x80%
 
 # Video control
 keep-open
@@ -15,7 +15,6 @@ cache-secs=180
 ytdl-format=bestvideo[height<=?1080][fps<=?30][vcodec!=?vp9]+bestaudio/best
 hwdec=vdpau
 hwdec-codecs=all
-no-ytdl
 
 # Subtitle 
 slang=en
