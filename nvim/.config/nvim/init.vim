@@ -100,6 +100,10 @@ let mapleader = ','
 map <C-b> :NERDTreeToggle<CR>
 map <Leader> <Plug>(easymotion-prefix)
 map <C-n> :noh<CR>
+imap jj <Esc> 
+noremap YY "+y<CR>
+noremap <leader>p "+gP<CR>
+noremap XX "+x<CR>
 
 "" git
 noremap <Leader>ga :Gwrite<CR>
