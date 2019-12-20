@@ -40,6 +40,10 @@ export DEFAULT_USER=$USER
 export EDITOR=nvim
 export TERMINAL=urxvt
 
+# nvm
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
 # aliases
 alias v="nvim"                                                                                                     
 alias py="python3"                                                                                                
