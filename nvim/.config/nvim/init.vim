@@ -46,7 +46,7 @@ Plug 'gko/vim-coloresque'
 Plug 'mattn/emmet-vim'
 
 " color
-Plug 'junegunn/seoul256.vim'
+" Plug 'junegunn/seoul256.vim'
 
 call plug#end()
 
@@ -57,8 +57,8 @@ let g:deoplete#enable_at_startup = 1
 let g:vimwiki_list = [{'path': '~/Documents/wiki/', 'syntax': 'markdown', 'ext': 'md'}]
 
 " eye candy
-let g:seoul256_background = 233
-colo seoul256
+" let g:seoul256_background = 233
+" colo seoul256
 
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'simple'

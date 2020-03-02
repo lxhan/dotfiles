@@ -25,8 +25,8 @@ zplug "lib/history", from:oh-my-zsh
 zplug "lib/grep", from:oh-my-zsh
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
-# zplug "themes/agnoster", from:oh-my-zsh
-zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
+zplug "themes/agnoster", from:oh-my-zsh
+# zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 
 if ! zplug check --verbose; then
     printf "Install? [Y/n]: "
