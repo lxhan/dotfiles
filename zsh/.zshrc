@@ -40,7 +40,7 @@ zplug load
 # zsh vars 
 export DEFAULT_USER=$USER
 export EDITOR=nvim
-export TERMINAL=urxvt
+export TERMINAL=alacritty
 
 # nvm
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
@@ -53,7 +53,7 @@ alias pip="pip3"
 alias nw="newsboat -u ~/.newsboat/urls -c ~/.newsboat/cache.db -C ~/.newsboat/config"
 alias yt="newsboat -u ~/.newsboat/yturls -c ~/.newsboat/ytcache.db -C ~/.newsboat/ytconfig"
 alias gw="cd ~/Documents/wiki"
-alias gc="cd ~/Documents/dotfiles"
+alias gc="cd ~/dotfiles"
 alias gd="cd ~/Downloads"
 alias uw="gw && git add . && git commit -m 'updated' && git push && cd -"
 alias uc="gc && git add . && git commit -m 'updated' && git push && cd -"
