@@ -32,18 +32,18 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vimwiki/vimwiki'
 
 " js, ts
-Plug 'jelera/vim-javascript-syntax'
-Plug 'leafgarland/typescript-vim'
-Plug 'Quramy/tsuquyomi'
+" Plug 'jelera/vim-javascript-syntax'
+" Plug 'leafgarland/typescript-vim'
+" Plug 'Quramy/tsuquyomi'
 
 " python
-Plug 'davidhalter/jedi-vim'
-Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
+" Plug 'davidhalter/jedi-vim'
+" Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
 
 " html, css
-Plug 'hail2u/vim-css3-syntax'
-Plug 'gko/vim-coloresque'
-Plug 'mattn/emmet-vim'
+" Plug 'hail2u/vim-css3-syntax'
+" Plug 'gko/vim-coloresque'
+" Plug 'mattn/emmet-vim'
 
 " color
 " Plug 'junegunn/seoul256.vim'
@@ -124,12 +124,12 @@ noremap <Leader>h :<C-u>split<CR>
 noremap <Leader>v :<C-u>vsplit<CR>
 
 " emmet
-let g:user_emmet_leader_key='<C-E>'
-let g:user_emmet_settings = {
-\  'html' : {
-\    'indentation' : '  '
-\  }
-\}
+" let g:user_emmet_leader_key='<C-E>'
+" let g:user_emmet_settings = {
+" \  'html' : {
+" \    'indentation' : '  '
+" \  }
+" \}
 
 " ctrlp
 let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
