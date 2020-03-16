@@ -3,4 +3,6 @@ newsboat/.newsboat/history.search
 newsboat/.newsboat/history.cmdline
 newsboat/.newsboat/ytcache.db
 nvim/.config/nvim/.netrwhist
+nvim/.config/configstore
+nvim/.config/htop
 

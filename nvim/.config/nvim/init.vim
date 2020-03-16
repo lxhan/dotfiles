@@ -20,6 +20,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 Plug 'jistr/vim-nerdtree-tabs'
+Plug 'unkiwii/vim-nerdtree-sync'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
@@ -47,7 +48,7 @@ Plug 'vimwiki/vimwiki'
 " Plug 'mattn/emmet-vim'
 
 " color
-" Plug 'junegunn/seoul256.vim'
+Plug 'junegunn/seoul256.vim'
 
 call plug#end()
 
@@ -58,8 +59,8 @@ let g:deoplete#enable_at_startup = 1
 let g:vimwiki_list = [{'path': '~/Documents/wiki/', 'syntax': 'markdown', 'ext': 'md'}]
 
 " eye candy
-" let g:seoul256_background = 233
-" colo seoul256
+let g:seoul256_background = 233
+colo seoul256
 
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'simple'
@@ -96,8 +97,12 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 let g:airline_symbols.maxlinenr = ''
 
+autocmd BufEnter * lcd %:p:h
+
 " mappings
 let mapleader = ','
+let NERDTreeMapOpenInTab = '\r'
+let g:NERDTreeHighlightCursorline = 1
 map <C-b> :NERDTreeToggle<CR>
 map <Leader> <Plug>(easymotion-prefix)
 map <C-n> :noh<CR>
