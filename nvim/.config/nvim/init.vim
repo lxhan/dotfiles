@@ -88,6 +88,7 @@ let mapleader = ','
 let NERDTreeMapOpenInTab = '\r'
 let g:NERDTreeHighlightCursorline = 1
 map <C-b> :NERDTreeToggle<CR>
+map <C-h> :nohl<CR>
 map <Leader> <Plug>(easymotion-prefix)
 imap jj <Esc> 
 noremap YY "+y<CR>
