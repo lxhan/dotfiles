@@ -28,26 +28,11 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-obsession'
 Plug 'airblade/vim-gitgutter'
 Plug 'kien/ctrlp.vim'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'easymotion/vim-easymotion'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vimwiki/vimwiki'
-
-" js, ts
-" Plug 'jelera/vim-javascript-syntax'
-" Plug 'leafgarland/typescript-vim'
-" Plug 'Quramy/tsuquyomi'
-
-" python
-" Plug 'davidhalter/jedi-vim'
-" Plug 'raimon49/requirements.txt.vim', {'for': 'requirements'}
-
-" html, css
-" Plug 'hail2u/vim-css3-syntax'
-" Plug 'gko/vim-coloresque'
-" Plug 'mattn/emmet-vim'
-
-" color
 Plug 'junegunn/seoul256.vim'
 
 call plug#end()
@@ -58,7 +43,7 @@ let g:deoplete#enable_at_startup = 1
 " vimwiki
 let g:vimwiki_list = [{'path': '~/Documents/wiki/', 'syntax': 'markdown', 'ext': 'md'}]
 
-" eye candy
+" color 
 let g:seoul256_background = 233
 colo seoul256
 
@@ -73,12 +58,12 @@ let g:airline_left_sep = '»'
 let g:airline_left_sep = '▶'
 let g:airline_right_sep = '«'
 let g:airline_right_sep = '◀'
-let g:airline_symbols.crypt = ''
-let g:airline_symbols.linenr = ''
+let g:airline_symbols.crypt = '🔒'
+let g:airline_symbols.linenr = '␊'
 let g:airline_symbols.linenr = '␤'
 let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.maxlinenr = '☰'
 let g:airline_symbols.maxlinenr = ''
-let g:airline_symbols.maxlinenr = '㏑'
 let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.paste = 'Þ'
@@ -94,8 +79,7 @@ let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
-let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols.linenr = ''
 
 autocmd BufEnter * lcd %:p:h
 
@@ -105,7 +89,6 @@ let NERDTreeMapOpenInTab = '\r'
 let g:NERDTreeHighlightCursorline = 1
 map <C-b> :NERDTreeToggle<CR>
 map <Leader> <Plug>(easymotion-prefix)
-map <C-n> :noh<CR>
 imap jj <Esc> 
 noremap YY "+y<CR>
 noremap <leader>p "+gP<CR>
@@ -128,14 +111,6 @@ nnoremap <S-Tab> gT
 "" split
 noremap <Leader>h :<C-u>split<CR>
 noremap <Leader>v :<C-u>vsplit<CR>
-
-" emmet
-" let g:user_emmet_leader_key='<C-E>'
-" let g:user_emmet_settings = {
-" \  'html' : {
-" \    'indentation' : '  '
-" \  }
-" \}
 
 " ctrlp
 let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
