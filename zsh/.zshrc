@@ -25,8 +25,8 @@ zplug "lib/history", from:oh-my-zsh
 zplug "lib/grep", from:oh-my-zsh
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
-# zplug "themes/agnoster", from:oh-my-zsh
-zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
+zplug "themes/agnoster", from:oh-my-zsh
+# zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 
 if ! zplug check --verbose; then
     printf "Install? [Y/n]: "
@@ -53,6 +53,5 @@ export PATH="$PATH:$HOME/Documents/flutter/bin"
 alias v="nvim"                                                                                                     
 alias gw="cd ~/Documents/wiki"
 alias gc="cd ~/Documents/dotfiles"
-alias gd="cd ~/Downloads"
 alias uw="gw && git add . && git commit -m 'updated' && git push && cd -"
 alias uc="gc && git add . && git commit -m 'updated' && git push && cd -"

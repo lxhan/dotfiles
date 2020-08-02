@@ -81,10 +81,9 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
-autocmd BufEnter * lcd %:p:h
 
 " mappings
-let mapleader = ','
+let mapleader = ' '
 let NERDTreeMapOpenInTab = '\r'
 let g:NERDTreeHighlightCursorline = 1
 map <C-b> :NERDTreeToggle<CR>
@@ -94,6 +93,8 @@ imap jj <Esc>
 noremap YY "+y<CR>
 noremap <leader>p "+gP<CR>
 noremap XX "+x<CR>
+vmap > >gv<cr>
+vmap < <gv<cr>
 
 "" git
 noremap <Leader>ga :Gwrite<CR>
@@ -108,6 +109,12 @@ noremap <Leader>gr :Gremove<CR>
 "" tabs
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
+
+map <leader>tt :tabnew<cr>
+map <leader>te :tabedit<cr>
+map <leader>tc :tabclose<cr>
+map <leader>tn :tabnext<cr>
+map <leader>tp :tabprevious<cr>
 
 "" split
 noremap <Leader>h :<C-u>split<CR>
