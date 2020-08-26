@@ -1,3 +1,10 @@
+fpath+=($ZSH/plugins/docker)
+autoload -U compinit && compinit
+
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # vimplug
 if [ ! -f ~/.local/share/nvim/site/autoload/plug.vim ]; then
     curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
@@ -25,8 +32,9 @@ zplug "lib/history", from:oh-my-zsh
 zplug "lib/grep", from:oh-my-zsh
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
-zplug "themes/agnoster", from:oh-my-zsh
+# zplug "themes/agnoster", from:oh-my-zsh
 # zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
+zplug romkatv/powerlevel10k, as:theme, depth:1
 
 if ! zplug check --verbose; then
     printf "Install? [Y/n]: "
@@ -43,15 +51,18 @@ export EDITOR=nvim
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+source ~/.nvm/nvm.sh
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-# flutter
-export PATH="$PATH:$HOME/Documents/flutter/bin"
+export PATH="$HOME/.local/bin:$PATH"
 
 # aliases
 alias v="nvim"                                                                                                     
-alias gw="cd ~/Documents/wiki"
-alias gc="cd ~/Documents/dotfiles"
+alias gw="cd ~/wiki"
+alias gc="cd ~/dotfiles"
 alias uw="gw && git add . && git commit -m 'updated' && git push && cd -"
 alias uc="gc && git add . && git commit -m 'updated' && git push && cd -"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

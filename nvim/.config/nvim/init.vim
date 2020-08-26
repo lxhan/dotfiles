@@ -41,7 +41,7 @@ call plug#end()
 let g:deoplete#enable_at_startup = 1
 
 " vimwiki
-let g:vimwiki_list = [{'path': '~/Documents/wiki/', 'syntax': 'markdown', 'ext': 'md'}]
+let g:vimwiki_list = [{'path': '~/wiki/', 'syntax': 'markdown', 'ext': 'md'}]
 
 " color 
 let g:seoul256_background = 233
