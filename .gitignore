@@ -1,2 +1,6 @@
 nvim/.config/*
 !nvim/.config/nvim/*
+newsboat/.newsboat/cache.db
+newsboat/.newsboat/ytcache.db
+newsboat/.newsboat/ytcache.db.lock
+

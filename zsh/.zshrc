@@ -1,8 +1,11 @@
-fpath+=($ZSH/plugins/docker)
-
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
+fpath+=($ZSH/plugins/docker)
 
 # vimplug
 if [ ! -f ~/.local/share/nvim/site/autoload/plug.vim ]; then
@@ -44,9 +47,18 @@ fi
 
 zplug load
 
+# brew autocomplte
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
 # zsh vars 
 export DEFAULT_USER=$USER
 export EDITOR=nvim
+export VISUAL=nvim
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
@@ -57,7 +69,12 @@ source ~/.nvm/nvm.sh
 export PATH="$HOME/.local/bin:$PATH"
 
 # aliases
-alias v="nvim"                                                                                                     
+alias v="nvim"
+alias py="python3"
+alias pyenv="python3 -m venv ./venv --upgrade-deps && source venv/bin/activate && python3 -m pip install -U autopep8"
+alias pyset='pyenv && printf "[*.py]\nindent_style = space\nindent_size = 4" > .editorconfig && touch main.py'
+alias nw="newsboat -u ~/.newsboat/urls -c ~/.newsboat/cache.db -C ~/.newsboat/config"
+alias yt="newsboat -u ~/.newsboat/yturls -c ~/.newsboat/ytcache.db -C ~/.newsboat/ytconfig"
 alias gw="cd ~/wiki"
 alias gc="cd ~/dotfiles"
 alias uw="gw && git add . && git commit -m 'updated' && git push && cd -"
