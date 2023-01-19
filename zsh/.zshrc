@@ -29,7 +29,7 @@ if ! zplug check --verbose; then
     fi
 fi
 
-zplug load --verbose
+zplug load
 
 if [[ "$OSTYPE" =~ ^linux ]]; then
   # Set PATH, MANPATH, etc., for Homebrew.
