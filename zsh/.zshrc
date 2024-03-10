@@ -31,8 +31,6 @@ fi
 
 zplug load
 
-eval "$(fnm env --use-on-cd)"
-
 # aliases
 alias v="nvim"
 alias py="python3"
@@ -47,3 +45,13 @@ alias ssh="kitty +kitten ssh"
 alias mux="tmuxinator"
 
 eval "$(starship init zsh)"
+
+if [[ "$OSTYPE" =~ ^linux ]]; then
+    # fnm
+    export PATH="/home/lx/.local/share/fnm:$PATH"
+    eval "`fnm env`"
+fi
+
+if [[ "$OSTYPE" =~ ^darwin ]]; then
+    eval "$(fnm env --use-on-cd)"
+fi
