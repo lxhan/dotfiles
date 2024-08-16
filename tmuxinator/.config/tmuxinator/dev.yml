@@ -1,0 +1,19 @@
+# /Users/alex/.config/tmuxinator/dev.yml
+
+name: dev
+root: ~/github
+
+windows:
+  - naonow:
+      root: ~/github/naonow
+      layout: main-horizontal
+      panes:
+        - server: cd server
+        - dashboard: cd dashboard
+        - admin: cd admin
+  - hive:
+      root: ~/github/habsida
+      layout: main-horizontal
+      panes:
+        - server: cd hive-backend
+        - infra: cd hive-infra

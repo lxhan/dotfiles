@@ -31,6 +31,9 @@ fi
 
 zplug load
 
+fpath=( ~/.zsh_autoload_functions "${fpath[@]}" )
+autoload -Uz load_nn
+
 # aliases
 alias v="nvim"
 alias py="python3"
@@ -45,6 +48,8 @@ alias ssh="kitty +kitten ssh"
 alias mux="tmuxinator"
 
 eval "$(starship init zsh)"
+eval "$(fzf --zsh)"
+eval "$(zoxide init zsh)"
 
 if [[ "$OSTYPE" =~ ^linux ]]; then
     # fnm
@@ -55,3 +60,10 @@ fi
 if [[ "$OSTYPE" =~ ^darwin ]]; then
     eval "$(fnm env --use-on-cd)"
 fi
+
+# The next line updates PATH for Yandex Cloud CLI.
+if [ -f '/Users/alex/yandex-cloud/path.bash.inc' ]; then source '/Users/alex/yandex-cloud/path.bash.inc'; fi
+
+# The next line enables shell command completion for yc.
+if [ -f '/Users/alex/yandex-cloud/completion.zsh.inc' ]; then source '/Users/alex/yandex-cloud/completion.zsh.inc'; fi
+
