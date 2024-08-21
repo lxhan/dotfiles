@@ -41,11 +41,11 @@ alias pyvenv="python3 -m venv .venv --upgrade-deps && source .venv/bin/activate 
 alias pyset='pyvenv && printf "[*.py]\nindent_style = space\nindent_size = 4" > .editorconfig && touch main.py'
 alias nw="newsboat -u ~/.newsboat/urls -c ~/.newsboat/cache.db -C ~/.newsboat/config"
 alias yt="newsboat -u ~/.newsboat/yturls -c ~/.newsboat/ytcache.db -C ~/.newsboat/ytconfig"
-alias uw="gw && git add . && git commit -m 'updated' && git push && cd -"
-alias uc="gc && git add . && git commit -m 'updated' && git push && cd -"
 alias tt="tmux split-window -v -p 30"
 alias ssh="kitty +kitten ssh"
 alias mux="tmuxinator"
+alias k="kubectl"
+alias t="task"
 
 eval "$(starship init zsh)"
 eval "$(fzf --zsh)"
