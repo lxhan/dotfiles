@@ -4,16 +4,15 @@ name: dev
 root: ~/github
 
 windows:
+  - habsida:
+      root: ~/github/habsida
+      layout: main-vertical
+      panes:
+        - 1:
   - naonow:
       root: ~/github/naonow
-      layout: main-horizontal
+      layout: main-vertical
       panes:
-        - server: cd server
-        - dashboard: cd dashboard
-        - admin: cd admin
-  - hive:
-      root: ~/github/habsida
-      layout: main-horizontal
-      panes:
-        - server: cd hive-backend
-        - infra: cd hive-infra
+        - server: z server
+        - dashboard: z dashboard
+        - admin: z admin
