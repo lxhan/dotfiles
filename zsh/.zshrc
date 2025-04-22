@@ -42,10 +42,11 @@ alias pyset='pyvenv && printf "[*.py]\nindent_style = space\nindent_size = 4" > 
 alias nw="newsboat -u ~/.newsboat/urls -c ~/.newsboat/cache.db -C ~/.newsboat/config"
 alias yt="newsboat -u ~/.newsboat/yturls -c ~/.newsboat/ytcache.db -C ~/.newsboat/ytconfig"
 alias tt="tmux split-window -v -p 30"
-alias ssh="kitty +kitten ssh"
+# alias ssh="kitty +kitten ssh"
 alias mux="tmuxinator"
 alias k="kubectl"
 alias t="task"
+alias c="cursor"
 
 eval "$(starship init zsh)"
 eval "$(fzf --zsh)"
@@ -67,3 +68,9 @@ if [ -f '/Users/alex/yandex-cloud/path.bash.inc' ]; then source '/Users/alex/yan
 # The next line enables shell command completion for yc.
 if [ -f '/Users/alex/yandex-cloud/completion.zsh.inc' ]; then source '/Users/alex/yandex-cloud/completion.zsh.inc'; fi
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/lx/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/lx/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/lx/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/lx/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
